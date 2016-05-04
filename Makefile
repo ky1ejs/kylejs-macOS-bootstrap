@@ -8,7 +8,7 @@ homebrew:
 	brew bundle
 
 ruby-packages: homebrew
-	rbenv init
+	eval "$(rbenv init -)"
 	rbenv install $(RUBY_VERSION)
 	rbenv global $(RUBY_VERSION)
 	~/.rbenv/shims/gem install bundle
