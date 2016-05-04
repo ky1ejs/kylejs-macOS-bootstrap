@@ -11,7 +11,9 @@ ruby-packages: homebrew
 	eval "$(rbenv init -)"
 	rbenv install $(RUBY_VERSION)
 	rbenv global $(RUBY_VERSION)
+	rbenv rehash
 	~/.rbenv/shims/gem install bundle
+	rbenv rehash
 	~/.rbenv/shims/bundle install
 
 provisioning-profile-quicklook: homebrew
