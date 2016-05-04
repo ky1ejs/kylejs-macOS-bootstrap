@@ -22,7 +22,7 @@ provisioning-profile-quicklook: homebrew
 
 fish: homebrew
 	chsh -s /usr/local/bin/fish
-	curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install
+	curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 	omf install bobthefish
 
 screenshots:
