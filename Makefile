@@ -3,6 +3,7 @@ RUBY_VERSION = 2.3.1
 osx: ruby-packages provisioning-profile-quicklook fish
 	defaults write com.apple.screencapture location ~/Downloads/
 	killall SystemUIServer
+	./link-dotfiles.sh
 
 homebrew:
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
