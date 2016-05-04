@@ -1,0 +1,11 @@
+"*":
+  core: {}
+  editor:
+    fontSize: 13
+    invisibles: {}
+    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "f5007c08-bed7-ec81-19ee-795567a89b91"
+  welcome:
+    showOnStartup: false
