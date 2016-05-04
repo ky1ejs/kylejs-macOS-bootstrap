@@ -30,3 +30,13 @@ cask 'spotify'
 cask 'telegram'
 cask 'transmission'
 cask 'wwdc'
+
+# To be configured in Makefile
+brew 'rbenv'
+
+cask 'provisioning'
+
+brew 'fish'
+tap 'caskroom/fonts'
+cask 'font-fontawesome'
+cask 'font-hack'
