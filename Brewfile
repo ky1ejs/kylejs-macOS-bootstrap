@@ -38,5 +38,4 @@ cask 'provisioning'
 
 brew 'fish'
 tap 'caskroom/fonts'
-cask 'font-fontawesome'
 cask 'font-hack'
