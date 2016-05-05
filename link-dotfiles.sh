@@ -2,7 +2,7 @@
 
 info 'installing dotfiles'
 
-for src in $(find -H Dotfiles -maxdepth 0)
+for dotfile in $(find -H Dotfiles -mindepth 1 -maxdepth 1)
 do
-    ln "$src" "$HOME/$src"
+    ln "$dotfile" "$HOME/$src"
 done
