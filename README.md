@@ -11,3 +11,9 @@ git clone git@github.com:kylejm/kylejm-osx-bootstrap.git ~/Developer/kylejm-osx-
 cd ~/Developer/kylejm-osx-boostrap
 make osx
 ```
+
+### TODO
+
+- [ ] Add tests
+- [ ] Improve link-dotfiles.sh to handle backing/deleting existing files in the `~/` dir
+- [ ] Error handling for all steps (e.g. `brew bundle` failures)
