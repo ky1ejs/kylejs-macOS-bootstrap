@@ -12,6 +12,13 @@ cd ~/Developer/kylejm-osx-boostrap
 make osx
 ```
 
+### Things to configure that aren't here
+
+- SSH
+- App Store purchases
+- [Fabric](https://fabric.io)
+- MS Office
+
 ### TODO
 
 - [ ] Add tests
