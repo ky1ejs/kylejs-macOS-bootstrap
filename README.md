@@ -17,3 +17,4 @@ make osx
 - [ ] Add tests
 - [ ] Improve link-dotfiles.sh to handle backing/deleting existing files in the `~/` dir
 - [ ] Error handling for all steps (e.g. `brew bundle` failures)
+- [ ] Create homebrew formula for [Helium](https://github.com/JadenGeller/Helium)
