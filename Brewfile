@@ -30,6 +30,7 @@ cask 'spotify'
 cask 'telegram'
 cask 'transmission'
 cask 'wwdc'
+cask 'hirundo'
 
 # To be configured in Makefile
 brew 'rbenv'
