@@ -6,6 +6,7 @@ homebrew:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew tap Homebrew/bundle
 	brew bundle
+	ln -sf com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
 
 ruby-packages: homebrew
 	eval "$(rbenv init -)"
