@@ -30,6 +30,7 @@ cask 'sourcetree'
 cask 'spotify'
 cask 'telegram'
 cask 'transmission'
+cask 'vlc'
 cask 'wwdc'
 cask 'hirundo'
 
