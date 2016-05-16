@@ -3,6 +3,7 @@ tap 'kylef/formulae'
 brew 'kylef/formulae/swiftenv'
 brew 'carthage'
 brew 'bitrise'
+brew 'git'
 
 # Heroku
 brew 'heroku-toolbelt'

@@ -4,6 +4,7 @@
 	required = true
 [user]
 	name = "Kyle McAlpine"
+	useConfigOnly = true
 [core]
 	excludesfile = /Users/kylejm/.gitignore_global
 	attributesfile = /Users/kylejm/.gitattributes
