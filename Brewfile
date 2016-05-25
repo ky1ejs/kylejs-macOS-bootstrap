@@ -34,6 +34,8 @@ cask 'transmission'
 cask 'vlc'
 cask 'wwdc'
 cask 'hirundo'
+cask 'gopro'
+cask 'gopro-studio'
 
 # To be configured in Makefile
 brew 'rbenv'
