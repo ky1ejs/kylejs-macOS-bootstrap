@@ -5,6 +5,7 @@ osx: ruby-packages provisioning-profile-quicklook fish screenshots link-dotfiles
 homebrew:
 	./install_brew.sh
 	brew tap Homebrew/bundle
+	brew update
 	brew bundle
 	cp -f com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
 	killall dock
