@@ -3,8 +3,7 @@ RUBY_VERSION = 2.3.1
 osx: ruby-packages provisioning-profile-quicklook fish screenshots link-dotfiles
 
 homebrew:
-	which ruby
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	./install-brew.sh
 	brew tap Homebrew/bundle
 	brew bundle
 	cp -f com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
@@ -33,4 +32,4 @@ screenshots:
 	killall SystemUIServer
 
 link-dotfiles:
-	./link-dotfiles.sh
+	./link_dotfiles.sh
