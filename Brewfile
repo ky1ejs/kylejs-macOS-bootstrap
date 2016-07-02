@@ -1,7 +1,6 @@
 # Swift, Cocoa, Xcode etc.
 tap 'kylef/formulae'
 brew 'kylef/formulae/swiftenv'
-brew 'carthage'
 brew 'bitrise'
 brew 'git'
 

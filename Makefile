@@ -1,20 +1,9 @@
 RUBY_VERSION = 2.3.1
 XCODE_VERSION = 7.3.1
 
-osx: homebrew provisioning-profile-quicklook fish screenshots link-dotfiles
+osx: ruby-packages carthage provisioning-profile-quicklook fish screenshots link-dotfiles
 
-homebrew: xcode
-	./install_brew.sh
-	brew tap Homebrew/bundle
-	brew update
-	brew bundle
-	cp -f com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
-	killall dock
-	
-xcode: ruby-packages
-	xcversion install $(XCODE_VERSION)
-
-ruby-packages:
+ruby-packages: homebrew
 	eval "$(rbenv init -)"
 	rbenv install $(RUBY_VERSION)
 	rbenv global $(RUBY_VERSION)
@@ -22,6 +11,20 @@ ruby-packages:
 	~/.rbenv/shims/gem install bundle
 	rbenv rehash
 	~/.rbenv/shims/bundle install
+
+homebrew:
+	./install_brew.sh
+	brew tap Homebrew/bundle
+	brew update
+	brew bundle
+	cp -f com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
+	killall dock
+
+carthage: xcode homebrew
+	brew install carthage
+
+xcode: ruby-packages
+	xcversion install $(XCODE_VERSION)
 
 provisioning-profile-quicklook: homebrew
 	defaults write com.apple.finder QLEnableTextSelection -bool TRUE
