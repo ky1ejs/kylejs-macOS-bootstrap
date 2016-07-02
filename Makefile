@@ -1,16 +1,9 @@
-RUBY_VERSION = 2.3.1
 XCODE_VERSION = 7.3.1
 
-osx: ruby-packages carthage provisioning-profile-quicklook fish screenshots link-dotfiles
+osx: rbenv carthage provisioning-profile-quicklook fish screenshots link-dotfiles
 
-ruby-packages: homebrew
-	eval "$(rbenv init -)"
-	rbenv install $(RUBY_VERSION)
-	rbenv global $(RUBY_VERSION)
-	rbenv rehash
-	~/.rbenv/shims/gem install bundle
-	rbenv rehash
-	~/.rbenv/shims/bundle install
+rbenv: homebrew
+	intialise_rbenv.sh
 
 homebrew:
 	./install_brew.sh
