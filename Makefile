@@ -1,16 +1,20 @@
 RUBY_VERSION = 2.3.1
+XCODE_VERSION = 7.3.1
 
-osx: ruby-packages provisioning-profile-quicklook fish screenshots link-dotfiles
+osx: homebrew provisioning-profile-quicklook fish screenshots link-dotfiles
 
-homebrew:
+homebrew: xcode
 	./install_brew.sh
 	brew tap Homebrew/bundle
 	brew update
 	brew bundle
 	cp -f com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
 	killall dock
+	
+xcode: ruby-packages
+	xcversion install $(XCODE_VERSION)
 
-ruby-packages: homebrew
+ruby-packages:
 	eval "$(rbenv init -)"
 	rbenv install $(RUBY_VERSION)
 	rbenv global $(RUBY_VERSION)
