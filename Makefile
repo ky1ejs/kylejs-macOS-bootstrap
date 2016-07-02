@@ -3,7 +3,8 @@ RUBY_VERSION = 2.3.1
 osx: ruby-packages provisioning-profile-quicklook fish screenshots link-dotfiles
 
 homebrew:
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	which ruby
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew tap Homebrew/bundle
 	brew bundle
 	cp -f com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
