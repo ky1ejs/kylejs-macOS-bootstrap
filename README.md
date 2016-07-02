@@ -1,4 +1,5 @@
 ## OS X Bootstrap
+[![Build Status](https://travis-ci.org/kylejm/kylejm-osx-bootstrap.svg?branch=master)](https://travis-ci.org/kylejm/kylejm-osx-bootstrap)
 
 Some people call these kind of repos `username/Dotfiles`, but they usually contain a lot more than just Dotfiles.
 
