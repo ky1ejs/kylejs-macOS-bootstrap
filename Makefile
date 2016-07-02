@@ -3,7 +3,7 @@ RUBY_VERSION = 2.3.1
 osx: ruby-packages provisioning-profile-quicklook fish screenshots link-dotfiles
 
 homebrew:
-	./install-brew.sh
+	./install_brew.sh
 	brew tap Homebrew/bundle
 	brew bundle
 	cp -f com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
