@@ -36,9 +36,6 @@ cask 'hirundo'
 cask 'gopro'
 cask 'gopro-studio'
 
-# To be configured in Makefile
-brew 'rbenv'
-
 cask 'provisioning'
 
 brew 'fish'

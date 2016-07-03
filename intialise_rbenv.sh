@@ -1,5 +1,6 @@
 #!/bin/sh
 
+brew install rbenv
 RUBY_VERSION="2.3.1"
 eval "$(rbenv init -)"
 rbenv install $RUBY_VERSION
