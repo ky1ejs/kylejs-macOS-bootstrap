@@ -16,7 +16,7 @@ homebrew:
 carthage: xcode homebrew
 	brew install carthage
 
-xcode: ruby-packages
+xcode: rbenv
 	xcversion install $(XCODE_VERSION)
 
 provisioning-profile-quicklook: homebrew
