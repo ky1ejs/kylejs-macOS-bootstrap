@@ -4,14 +4,19 @@ RUBY_VERSION="2.3.1"
 
 brew install rbenv
 rbenv init
+
 rbenv install $RUBY_VERSION
+rbenv rehash
 rbenv global $RUBY_VERSION
-rbenv rehash
+
 PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
-~/.rbenv/shims/gem install bundle
+
+gem install bundler
 rbenv rehash
+
 ls -la ~/.rbenv/shims/
 rbenv versions
 which ruby
 which bundle
+
 ~/.rbenv/shims/bundle install
