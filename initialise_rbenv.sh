@@ -9,4 +9,5 @@ rbenv global $RUBY_VERSION
 rbenv rehash
 ~/.rbenv/shims/gem install bundle
 rbenv rehash
+ls -la ~/.rbenv/shims/
 ~/.rbenv/shims/bundle install
