@@ -7,6 +7,7 @@ rbenv init
 rbenv install $RUBY_VERSION
 rbenv global $RUBY_VERSION
 rbenv rehash
+PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 ~/.rbenv/shims/gem install bundle
 rbenv rehash
 ls -la ~/.rbenv/shims/
