@@ -3,7 +3,7 @@ XCODE_VERSION = 7.3.1
 osx: rbenv carthage provisioning-profile-quicklook fish screenshots link-dotfiles
 
 rbenv: homebrew
-	intialise_rbenv.sh
+	initialise_rbenv.sh
 
 homebrew:
 	./install_brew.sh
