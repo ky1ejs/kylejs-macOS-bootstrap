@@ -1,6 +1,6 @@
 XCODE_VERSION = 7.3.1
 
-osx: rbenv carthage provisioning-profile-quicklook fish screenshots link-dotfiles
+osx: rbenv carthage provisioning-profile-quicklook fish screenshots dock link-dotfiles
 
 rbenv: homebrew
 	initialise_rbenv.sh
@@ -10,8 +10,6 @@ homebrew:
 	brew tap Homebrew/bundle
 	brew update
 	brew bundle
-	cp -f com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
-	killall dock
 
 carthage: xcode homebrew
 	brew install carthage
@@ -31,6 +29,9 @@ fish: homebrew
 screenshots:
 	defaults write com.apple.screencapture location ~/Downloads/
 	killall SystemUIServer
+
+dock:
+	configure_dock.sh
 
 link-dotfiles:
 	./link_dotfiles.sh
