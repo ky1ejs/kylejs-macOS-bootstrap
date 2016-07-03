@@ -12,4 +12,5 @@ rbenv rehash
 ls -la ~/.rbenv/shims/
 rbenv versions
 which ruby
+which bundle
 ~/.rbenv/shims/bundle install
