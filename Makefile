@@ -16,6 +16,7 @@ carthage: xcode homebrew
 
 xcode: rbenv
 	xcversion install $(XCODE_VERSION)
+	defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 
 provisioning-profile-quicklook: homebrew
 	defaults write com.apple.finder QLEnableTextSelection -bool TRUE
