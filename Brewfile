@@ -2,6 +2,7 @@
 tap 'kylef/formulae'
 brew 'kylef/formulae/swiftenv'
 brew 'bitrise'
+brew 'mergepbx'
 brew 'git'
 
 # Heroku
@@ -28,6 +29,7 @@ cask 'istat-menus'
 cask 'iterm2'
 cask 'kaleidoscope'
 cask 'mamp'
+cask 'paw'
 cask 'provisioning'
 cask 'sketch'
 cask 'sourcetree'
