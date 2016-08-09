@@ -2,8 +2,8 @@
 
 cp -f com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
 
-PROCESS=dock
+PROCESS=Dock
 NUMBER=$(ps aux | grep $PROCESS | wc -l)
-if [ $NUMBER -gt 0 ] then
-    killall dock
+if [ $NUMBER -gt 0 ]; then
+    killall $PROCESS
 fi
