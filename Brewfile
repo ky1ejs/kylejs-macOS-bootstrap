@@ -3,6 +3,7 @@ tap 'kylef/formulae'
 brew 'kylef/formulae/swiftenv'
 brew 'bitrise'
 brew 'mergepbx'
+brew 'gifify'
 brew 'git'
 
 # Heroku
@@ -10,6 +11,7 @@ brew 'heroku-toolbelt'
 
 # Apps
 tap 'caskroom/cask'
+cask '1password'
 cask 'alfred'
 cask 'appcleaner'
 cask 'atom'
