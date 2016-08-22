@@ -3,6 +3,7 @@ tap 'kylef/formulae'
 brew 'kylef/formulae/swiftenv'
 brew 'bitrise'
 brew 'mergepbx'
+brew 'gifify'
 brew 'git'
 
 # Heroku
