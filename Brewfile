@@ -10,6 +10,7 @@ brew 'heroku-toolbelt'
 
 # Apps
 tap 'caskroom/cask'
+cask '1password'
 cask 'alfred'
 cask 'appcleaner'
 cask 'atom'
