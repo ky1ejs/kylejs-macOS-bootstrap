@@ -1,5 +1,10 @@
 #! /bin/bash
-DOTFILES_DIR="Dotfiles"
+
+source functions.sh
+
+printMessage "Linking dotfiles and configs"
+
+DOTFILES_DIR="dotfiles"
 PWD=$(pwd)
 for FILE_PATH in $(find $DOTFILES_DIR -mindepth 1 -maxdepth 1)
   do
