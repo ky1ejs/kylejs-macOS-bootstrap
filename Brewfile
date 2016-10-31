@@ -40,6 +40,7 @@ cask 'slack'
 cask 'sourcetree'
 cask 'spotify'
 cask 'transmission'
+cask 'tunnelbear'
 cask 'vlc'
 cask 'wwdc'
 
