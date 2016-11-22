@@ -1,5 +1,11 @@
 #!/bin/sh
 
+if [ -z "$1" ] || [ -z "$2" ]
+  then
+    echo "Usage - git-change-email \"OLD_EMAIL\" \"NEW_EMAIL\""
+    exit 1
+fi
+
 git filter-branch -f --env-filter '
 
 OLD_EMAIL="'"$1"'"
