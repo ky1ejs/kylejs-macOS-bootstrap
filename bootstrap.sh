@@ -9,7 +9,6 @@ fi
 
 ./install_brew.sh
 ./install_carthage.sh
-./install_provisioning_profile_ql.sh
 ./configure_defaults.sh
 ./link_dotfiles.sh
 ./install_fish.sh

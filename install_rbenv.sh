@@ -20,6 +20,9 @@ rbenv global $RUBY_VERSION
 
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 
+printMessage "Making sure required Xcode tools are installed"
+xcode-select --install
+
 printMessage "Installing gems"
 gem install bundler
 rbenv rehash

@@ -22,7 +22,7 @@ fi
 
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 
-defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Temp 
+defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Temp
 killall SystemUIServer
 
 cp -f plists/com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
@@ -33,3 +33,12 @@ killProcess Finder
 
 cp -f plists/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist
 cp -f plists/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Safari.plist
+
+if ! $(exists "brew"); then
+  printMessage "Homebrew needs to be installed to setup provisioning profile quick look"
+  exit 1
+fi
+
+printMessage "Setting up quick look for provisioning profiles"
+defaults write com.apple.finder QLEnableTextSelection -bool TRUE
+killall Finder
