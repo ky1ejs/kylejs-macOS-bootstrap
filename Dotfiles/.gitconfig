@@ -11,6 +11,8 @@
 [merge "mergepbx"]
         name = Xcode project file merger
         driver = /usr/local/bin/mergepbx %O %A %B
+[mergetool "mergepbx"]
+    cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
 [diff "plist"]
 	textconv = plutil -convert xml1 -o -
 [push]
