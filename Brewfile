@@ -42,7 +42,6 @@ cask 'spotify'
 cask 'transmission'
 cask 'tunnelbear'
 cask 'vlc'
-cask 'wwdc'
 
 # Settings up fish
 brew 'fish'
