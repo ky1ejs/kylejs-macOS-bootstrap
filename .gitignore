@@ -10,4 +10,6 @@ Dotfiles/.atom/.apm/*
 Dotfiles/.atom/packages/*
 Dotfiles/.atom/blob-store/*
 
+Dotfiles/.config/gcloud/*
+
 .DS_Store
