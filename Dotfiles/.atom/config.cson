@@ -1,11 +1,10 @@
 "*":
-  core: {}
+  core:
+    telemetryConsent: "limited"
   editor:
-    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     softWrap: true
-    tabLength: 4
   "exception-reporting":
     userId: "f5007c08-bed7-ec81-19ee-795567a89b91"
   welcome:
