@@ -10,6 +10,7 @@ Dotfiles/.atom/.apm/*
 Dotfiles/.atom/packages/*
 Dotfiles/.atom/blob-store/*
 Dotfiles/.atom/packages/*
+Dotfiles/.config/heroku/*
 
 Dotfiles/.config/gcloud/*
 
