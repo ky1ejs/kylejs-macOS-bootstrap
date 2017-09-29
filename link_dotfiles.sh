@@ -4,6 +4,8 @@ source functions.sh
 
 printMessage "Linking dotfiles and configs"
 
+ln -s $PWD/bin $HOME/bin
+
 DOTFILES_DIR="dotfiles"
 PWD=$(pwd)
 for FILE_PATH in $(find $DOTFILES_DIR -mindepth 1 -maxdepth 1)
