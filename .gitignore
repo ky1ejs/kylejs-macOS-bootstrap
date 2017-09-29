@@ -9,6 +9,7 @@ Dotfiles/.config/fish/fishd.*
 Dotfiles/.atom/.apm/*
 Dotfiles/.atom/packages/*
 Dotfiles/.atom/blob-store/*
+Dotfiles/.atom/packages/*
 
 Dotfiles/.config/gcloud/*
 
