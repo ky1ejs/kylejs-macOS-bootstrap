@@ -44,6 +44,7 @@ cask 'transmission'
 cask 'tunnelbear'
 cask 'tunnelblick'
 cask 'vlc'
+cask 'whatsapp'
 
 # Settings up fish
 brew 'fish'
