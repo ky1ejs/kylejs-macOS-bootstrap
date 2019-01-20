@@ -7,8 +7,5 @@ set -gx OMF_PATH "/Users/kylejm/.local/share/omf"
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
 
-set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home"
-
-set PATH $HOME/.rbenv/shims $HOME/bin $JAVA_HOME/bin $PATH
+set PATH $HOME/.rbenv/shims $HOME/bin $PATH
 rbenv init - | source
-
