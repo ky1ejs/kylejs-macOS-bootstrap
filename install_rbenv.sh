@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RUBY_VERSION="2.3.1"
+RUBY_VERSION="2.6.0"
 
 source functions.sh
 
@@ -18,12 +18,8 @@ rbenv install $RUBY_VERSION
 rbenv rehash
 rbenv global $RUBY_VERSION
 
-export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH" 
 
-printMessage "Making sure required Xcode tools are installed"
-xcode-select --install
-
-printMessage "Installing gems"
+printMessage "Installing bundler"
 gem install bundler
 rbenv rehash
-bundle install
