@@ -1,48 +1,50 @@
-# Swift, Cocoa, Xcode etc.
-tap 'kylef/formulae'
-brew 'kylef/formulae/swiftenv'
-brew 'bitrise'
-brew 'mergepbx'
-brew 'gifify'
+# Git - latest version, override mac OS pre-install
 brew 'git'
-brew 'kubernetes-cli'
-brew 'rbenv'
-brew 'watch'
 
-# Heroku
+# Swift, Cocoa, Xcode etc.
+brew 'mergepbx'
+
+# Ruby
+brew 'rbenv'
+
+# CLI tools
 brew 'heroku-toolbelt'
+brew 'gifify'
 
 # Apps
 tap 'caskroom/cask'
 cask '1password'
 cask 'alfred'
 cask 'appcleaner'
-cask 'atom'
 cask 'bartender'
 cask 'beamer'
+cask 'caffeine'
 cask 'charles'
 cask 'colorpicker-skalacolor'
 cask 'cyberduck'
 cask 'daisydisk'
-cask 'flux'
+cask 'firefox'
 cask 'github-desktop'
 cask 'google-chrome'
-cask 'google-cloud-sdk'
 cask 'google-drive'
-cask 'gopro'
 cask 'istat-menus'
 cask 'iterm2'
 cask 'kaleidoscope'
-cask 'mamp'
 cask 'paw'
+cask 'postico'
 cask 'provisioning'
-cask 'sketch'
+cask 'rocket'
+cask 'skype'
 cask 'slack'
+cask 'sonos'
+cask 'soulver'
 cask 'sourcetree'
+cask 'spotmenu'
 cask 'spotify'
+cask 'telegram'
 cask 'transmission'
 cask 'tunnelbear'
-cask 'tunnelblick'
+cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
 
