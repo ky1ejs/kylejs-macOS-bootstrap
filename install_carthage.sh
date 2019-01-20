@@ -17,5 +17,8 @@ if [ ! -d /Applications/Xcode.app ]; then
 	exit 1
 fi
 
+printMessage "Making sure required Xcode tools are installed"
+xcode-select --install
+
 printMessage "Installing Carthage"
 brew install carthage
