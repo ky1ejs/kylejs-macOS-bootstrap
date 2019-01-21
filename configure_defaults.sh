@@ -26,10 +26,10 @@ defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com\
 killall SystemUIServer
 
 cp -f plists/com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
-killProcess Dock
+killall Dock
 
 cp -f plists/com.apple.finder.plist ~/Library/Preferences/com.apple.finder.plist
-killProcess Finder
+killall Finder
 
 cp -f plists/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist
 cp -f plists/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Safari.plist
