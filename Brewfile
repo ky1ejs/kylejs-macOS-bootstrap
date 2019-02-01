@@ -7,6 +7,9 @@ brew 'mergepbx'
 # Ruby
 brew 'rbenv'
 
+# JS
+brew 'npm'
+
 # CLI tools
 brew 'heroku-toolbelt'
 brew 'gifify'
