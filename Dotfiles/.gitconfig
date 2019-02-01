@@ -8,8 +8,8 @@
 	useConfigOnly = true
 	email = kyle@kjm.bio
 [core]
-	excludesfile = /Users/kylejm/.gitignore_global
-	attributesfile = /Users/kylejm/.gitattributes
+	excludesfile = $HOME/.gitignore_global
+	attributesfile = $HOME/.gitattributes
 [merge "mergepbx"]
         name = Xcode project file merger
         driver = /usr/local/bin/mergepbx %O %A %B
@@ -32,7 +32,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [alias]
 	cam = commit -am
