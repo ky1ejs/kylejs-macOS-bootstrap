@@ -8,8 +8,8 @@
 	useConfigOnly = true
 	email = kyle@kjm.bio
 [core]
-	excludesfile = $HOME/.gitignore_global
-	attributesfile = $HOME/.gitattributes
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes
 [merge "mergepbx"]
         name = Xcode project file merger
         driver = /usr/local/bin/mergepbx %O %A %B
