@@ -11,7 +11,7 @@ Dotfiles/.atom/packages/*
 Dotfiles/.atom/blob-store/*
 Dotfiles/.atom/packages/*
 Dotfiles/.config/heroku/*
-
+Dotfiles/.config/configstore/update-notifier-npm.json
 Dotfiles/.config/gcloud/*
 
 .DS_Store
