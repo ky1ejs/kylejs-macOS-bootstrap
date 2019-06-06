@@ -18,4 +18,5 @@ alias gre='git rebase'
 alias grec='git rebase --continue'
 alias gres='git rebase --skip'
 alias grea='git rebase --abort'
+alias gmt='git mergetool'
 
