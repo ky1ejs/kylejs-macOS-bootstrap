@@ -6,7 +6,6 @@
 [user]
 	name = Kyle McAlpine
 	useConfigOnly = true
-	email = kyle@kjm.bio
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes
