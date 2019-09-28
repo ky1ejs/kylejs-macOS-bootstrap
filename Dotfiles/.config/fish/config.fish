@@ -1,4 +1,5 @@
 set PATH $HOME/.rbenv/shims $HOME/bin $PATH
+set -x JAVA_HOME (/usr/libexec/java_home)
 rbenv init - | source
 
 # Aliases
