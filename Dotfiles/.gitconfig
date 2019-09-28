@@ -7,7 +7,7 @@
 	name = Kyle McAlpine
 	useConfigOnly = true
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/kmcalpine/.gitignore_global
 	attributesfile = ~/.gitattributes
 [merge "mergepbx"]
         name = Xcode project file merger
