@@ -16,9 +16,9 @@ cd ~/Developer/kylejm-macOS-boostrap
 ### Things to configure that aren't here
 
 - SSH
+- GPG
+- Local git configs
 - App Store purchases
-- [Fabric](https://fabric.io)
-- MS Office
 
 ### TODO
 

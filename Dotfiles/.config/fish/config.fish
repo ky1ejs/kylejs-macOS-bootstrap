@@ -1,6 +1,6 @@
-set PATH $HOME/.rbenv/shims $HOME/bin $PATH
-set -x JAVA_HOME (/usr/libexec/java_home)
+set PATH $HOME/.rbenv/shims $HOME/.jenv/bin $HOME/bin /usr/local/lib/node_modules $PATH
 rbenv init - | source
+status --is-interactive; and source (jenv init -|psub)
 
 # Aliases
 alias gs='git status'
@@ -20,4 +20,6 @@ alias grec='git rebase --continue'
 alias gres='git rebase --skip'
 alias grea='git rebase --abort'
 alias gmt='git mergetool'
+alias gfu='git fetch upstream -p'
+alias grup='git reset --hard upstream/master && git push -f origin master'
 

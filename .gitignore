@@ -1,7 +1,6 @@
 Gemfile.lock
+
 Dotfiles/.config/omf
-Dotfiles/.config/git
-Dotfiles/.config/git
 Dotfiles/.config/fish/fish_history
 Dotfiles/.config/fish/functions
 Dotfiles/.config/fish/functions
@@ -13,5 +12,17 @@ Dotfiles/.atom/packages/*
 Dotfiles/.config/heroku/*
 Dotfiles/.config/configstore/update-notifier-npm.json
 Dotfiles/.config/gcloud/*
+Dotfiles/.config/Autodesk/*
+Dotfiles/.config/gatsby/*
+Dotfiles/.config/gh/*
+Dotfiles/.config/git/config.local
+Dotfiles/.config/git/config.spotify
+Dotfiles/.config/karabiner/automatic_backups/*
+Dotfiles/.config/yarn/*
+Dotfiles/.config/iterm2/*
+
+!Dotfiles/.config/gh/config.yml
+
 
 .DS_Store
+iTerm/com.googlecode.iterm2.plist

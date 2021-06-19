@@ -6,6 +6,9 @@
 [user]
 	name = Kyle McAlpine
 	useConfigOnly = true
+[include]
+  path = config.local
+
 [core]
 	excludesfile = /Users/kmcalpine/.gitignore_global
 	attributesfile = ~/.gitattributes
@@ -38,3 +41,8 @@
 	cm = commit -m
 [pull]
 	rebase = true
+[includeIf "gitdir:/Users/kmcalpine/Developer/spotify/**"]
+  path = config.spotify
+
+[commit]
+	gpgsign = true
