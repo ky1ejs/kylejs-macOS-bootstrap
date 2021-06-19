@@ -8,7 +8,6 @@ if [ ! -d /Applications/Xcode.app ]; then
 fi
 
 ./install_brew.sh
-./install_carthage.sh
 ./configure_defaults.sh
 ./link_dotfiles.sh
 ./install_fish.sh
