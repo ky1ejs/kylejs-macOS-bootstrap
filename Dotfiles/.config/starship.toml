@@ -1,0 +1,7 @@
+
+[gcloud]
+disabled = true
+
+[git_metrics]
+disabled = false
+
