@@ -1,57 +1,58 @@
 # Git - latest version, override mac OS pre-install
 brew 'git'
+brew 'git-lfs'
 
 # Swift, Cocoa, Xcode etc.
 brew 'mergepbx'
 
-# Ruby
-brew 'rbenv'
-
-# JS
-brew 'npm'
-brew 'node'
-brew 'yarn'
-
-# CLI tools
-brew 'heroku-toolbelt'
+brew 'fish'
+brew 'gh'
 brew 'gifify'
+brew 'jenv'
+brew 'pinentry'
+brew 'pinentry-mac'
+brew 'pyenv'
 brew 'qmk'
+brew 'rbenv'
+brew 'starship'
+brew 'stern'
 
 # Apps
 tap 'caskroom/cask'
 cask '1password'
 cask 'alfred'
 cask 'appcleaner'
-cask 'bartender'
 cask 'bettertouchtool'
+cask 'beamer'
 cask 'caffeine'
 cask 'charles'
-cask 'colorpicker-skalacolor'
 cask 'daisydisk'
-cask 'firefox'
 cask 'github'
-cask 'google-chrome'
-cask 'google-drive-file-stream'
+cask 'google-cloud-sdk'
 cask 'gpg-suite-no-mail'
 cask 'istat-menus'
 cask 'iterm2'
+cask 'java11'
 cask 'kaleidoscope'
+cask 'kicad'
 cask 'notion'
 cask 'paw'
 cask 'postico'
 cask 'provisioning'
 cask 'rocket'
 cask 'signal'
-cask 'skype'
 cask 'slack'
 cask 'sonos'
 cask 'soulver'
+cask 'sourcetree'
 cask 'spotmenu'
 cask 'spotify'
 cask 'telegram'
 cask 'visual-studio-code'
+cask 'vlc'
+cask 'whatsapp'
 
-# Settings up fish
-brew 'fish'
+# Fonts
 tap 'caskroom/fonts'
 cask 'font-hack'
+cask 'font-caskaydia-cove-nerd-font'
