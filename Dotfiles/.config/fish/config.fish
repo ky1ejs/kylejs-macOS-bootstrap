@@ -10,6 +10,8 @@ status --is-interactive; and source (jenv init -|psub)
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
+set GPG_TTY = (tty)
+
 # Aliases
 alias gs='git status'
 alias gd='git diff'
