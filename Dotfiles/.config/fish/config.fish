@@ -10,6 +10,7 @@ status --is-interactive; and source (jenv init -|psub)
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
+set -g theme_vcs_ignore_paths /Users/kmcalpine/Developer/spotify/client-android /Users/kmcalpine/Developer/spotify/client-ios
 set GPG_TTY = (tty)
 
 # Aliases
