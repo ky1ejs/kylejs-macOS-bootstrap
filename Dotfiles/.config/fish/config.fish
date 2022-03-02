@@ -13,6 +13,8 @@ status is-interactive; and pyenv init - | source
 set -g theme_vcs_ignore_paths /Users/kmcalpine/Developer/spotify/client-android /Users/kmcalpine/Developer/spotify/client-ios
 set GPG_TTY = (tty)
 
+starship init fish | source
+
 # Aliases
 alias gs='git status'
 alias gd='git diff'
