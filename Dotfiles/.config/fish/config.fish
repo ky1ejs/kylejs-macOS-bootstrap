@@ -1,5 +1,9 @@
 set PATH $HOME/.rbenv/shims $HOME/.jenv/bin $HOME/bin /usr/local/lib/node_modules $PATH
+
+# rbenv
 rbenv init - | source
+
+# jenv
 status --is-interactive; and source (jenv init -|psub)
 
 # Aliases
