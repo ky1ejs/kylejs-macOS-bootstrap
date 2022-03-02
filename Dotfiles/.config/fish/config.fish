@@ -6,6 +6,10 @@ rbenv init - | source
 # jenv
 status --is-interactive; and source (jenv init -|psub)
 
+# pyenv
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source
+
 # Aliases
 alias gs='git status'
 alias gd='git diff'
