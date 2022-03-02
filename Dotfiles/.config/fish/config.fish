@@ -35,4 +35,6 @@ alias grea='git rebase --abort'
 alias gmt='git mergetool'
 alias gfu='git fetch upstream -p'
 alias grup='git reset --hard upstream/master && git push -f origin master'
+alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
+
 
