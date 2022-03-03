@@ -1,1 +1,0 @@
-{"title":"","rules":[{"description":"Escape Hyper\n","manipulators":[{"type":"basic","from":{"modifiers":{"optional":["any"]},"key_code":"non_us_backslash"},"to":[{"repeat":false,"modifiers":["left_gui","left_control","left_alt","left_shift"],"key_code":"left_shift"}],"to_if_alone":[{"repeat":false,"key_code":"escape"}]}]}]}
