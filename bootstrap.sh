@@ -12,4 +12,5 @@ fi
 ./link_dotfiles.sh
 ./install_fish.sh
 ./install_rbenv.sh
+./install_jenv.sh
 ./link_xcode_theme.sh
