@@ -10,6 +10,7 @@ fi
 printMessage "Installing fish"
 brew install fish
 
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
+
 printMessage "fish installed\n\nTo set as default, run:\n\n\$ sudo echo /usr/local/bin/fish >> /etc/shells
-\n\$ chsh -s `which fish`\n\nFor theming run\n\n\$ curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
-\n\$ omf install bobthefish"
+\n\$ chsh -s `which fish`\n\nFor theming run\n\n\$"
