@@ -1,5 +1,7 @@
 set PATH $HOME/.rbenv/shims $HOME/.jenv/bin $HOME/bin /usr/local/lib/node_modules $PATH
 
+eval (/opt/homebrew/bin/brew shellenv)
+
 # rbenv
 rbenv init - | source
 
