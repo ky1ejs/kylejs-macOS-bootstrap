@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RUBY_VERSION="2.6.0"
+RUBY_VERSION="3.1.1"
 
 source functions.sh
 
