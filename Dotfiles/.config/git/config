@@ -4,7 +4,7 @@
 	required = true
 	process = git-lfs filter-process
 [user]
-	name = Kyle McAlpine
+	name = Kyle Satti
 	useConfigOnly = true
 [include]
   path = config.local
