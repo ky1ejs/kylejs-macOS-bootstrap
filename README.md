@@ -1,5 +1,5 @@
 ## macOS Bootstrap
-[![Build Status](https://travis-ci.org/kylejm/kylejm-macOS-bootstrap.svg?branch=master)](https://travis-ci.org/kylejm/kylejm-macOS-bootstrap)
+[![Build Status](https://travis-ci.org/ky1ejs/kylejs-macOS-bootstrap.svg?branch=master)](https://travis-ci.org/ky1ejs/kylejs-macOS-bootstrap)
 
 Some people call these kind of repos `username/Dotfiles`, but they usually contain a lot more than just Dotfiles.
 
@@ -8,8 +8,8 @@ This repo contains my Dotfiles and command line tools and applications that I ha
 ### Usage
 
 ```shell
-git clone git@github.com:kylejm/kylejm-macOS-bootstrap.git ~/Developer/kylejm-macOS-bootstrap
-cd ~/Developer/kylejm-macOS-boostrap
+git clone git@github.com:ky1ejs/kylejs-macOS-bootstrap.git ~/Developer/kylejs-macOS-bootstrap
+cd ~/Developer/kylejs-macOS-boostrap
 ./bootstrap.sh
 ```
 

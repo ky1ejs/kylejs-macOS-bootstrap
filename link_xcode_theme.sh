@@ -9,4 +9,4 @@ if [ ! -d THEME_LOCATION ]; then
 	exit 0
 fi
 
-ln -s $PWD/kylejm.xccolortheme $THEME_LOCATION
+ln -s $PWD/kylejs.xccolortheme $THEME_LOCATION

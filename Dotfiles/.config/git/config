@@ -10,7 +10,7 @@
   path = config.local
 
 [core]
-	excludesfile = /Users/kmcalpine/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes
 [merge "mergepbx"]
         name = Xcode project file merger
@@ -41,7 +41,7 @@
 	cm = commit -m
 [pull]
 	rebase = true
-[includeIf "gitdir:/Users/kmcalpine/Developer/spotify/**"]
+[includeIf "gitdir:~/Developer/spotify/**"]
   path = config.spotify
 
 [commit]
