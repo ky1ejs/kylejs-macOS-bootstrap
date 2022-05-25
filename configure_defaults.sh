@@ -16,8 +16,8 @@ if [ ! -d "$HOME/Developer" ]; then
   mkdir ~/Developer
 fi
 
-if [ ! -d "$HOME/Developer/kylejm" ]; then
-  mkdir ~/Developer/kylejm
+if [ ! -d "$HOME/Developer/kylejs" ]; then
+  mkdir ~/Developer/kylejs
 fi
 
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
