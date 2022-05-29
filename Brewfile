@@ -49,5 +49,4 @@ cask 'whatsapp'
 
 # Fonts
 tap 'homebrew/cask-fonts'
-cask 'font-hack'
-cask 'font-caskaydia-cove-nerd-font'
+cask 'font-hack-nerd-font'
