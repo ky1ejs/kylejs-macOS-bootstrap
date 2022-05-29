@@ -284,8 +284,34 @@
 			</dict>
 			<key>Guid</key>
 			<string>AEBF06DE-AD99-4164-990E-F04249C723E0</string>
+			<key>Has Hotkey</key>
+			<true/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>HotKey Activated By Modifier</key>
+			<false/>
+			<key>HotKey Alternate Shortcuts</key>
+			<array/>
+			<key>HotKey Characters</key>
+			<string></string>
+			<key>HotKey Characters Ignoring Modifiers</key>
+			<string>T</string>
+			<key>HotKey Key Code</key>
+			<integer>17</integer>
+			<key>HotKey Modifier Activation</key>
+			<integer>0</integer>
+			<key>HotKey Modifier Flags</key>
+			<integer>1966080</integer>
+			<key>HotKey Window Animates</key>
+			<true/>
+			<key>HotKey Window AutoHides</key>
+			<false/>
+			<key>HotKey Window Dock Click Action</key>
+			<integer>0</integer>
+			<key>HotKey Window Floats</key>
+			<true/>
+			<key>HotKey Window Reopens On Activation</key>
+			<false/>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
@@ -594,6 +620,8 @@
 			<key>Minimum Contrast</key>
 			<real>0.49528706868489586</real>
 			<key>Mouse Reporting</key>
+			<true/>
+			<key>Movement Keys Scroll Outside Interactive Apps</key>
 			<true/>
 			<key>Name</key>
 			<string>Default</string>
