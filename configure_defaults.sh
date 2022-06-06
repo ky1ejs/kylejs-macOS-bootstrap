@@ -22,7 +22,9 @@ fi
 
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 
-defaults write com.apple.screencapture location ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Temp
+# Apparently on Monetery you now need to do this from the UI T_T
+# Take a screenshot with CMD + Shift + 5 and then select options to change the location
+defaults write com.apple.screencapture location ~/Downloads
 killall SystemUIServer
 
 cp -f plists/com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
