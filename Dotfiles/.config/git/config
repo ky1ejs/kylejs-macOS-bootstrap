@@ -10,8 +10,8 @@
   path = config.local
 
 [core]
-	excludesfile = ~/.gitignore_global
-	attributesfile = ~/.gitattributes
+	excludesfile = ~/.config/git/ignore_global
+	attributesfile = ~/.config/git/gitattributes
 [merge "mergepbx"]
         name = Xcode project file merger
         driver = /usr/local/bin/mergepbx %O %A %B
