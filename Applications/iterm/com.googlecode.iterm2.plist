@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>ApplePressAndHoldEnabled</key>
-	<false/>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
-	<key>AppleWindowTabbingMode</key>
-	<string>manual</string>
 	<key>Default Bookmark Guid</key>
 	<string>AEBF06DE-AD99-4164-990E-F04249C723E0</string>
 	<key>HapticFeedbackForEsc</key>
@@ -303,15 +293,15 @@
 			<key>HotKey Modifier Flags</key>
 			<integer>1966080</integer>
 			<key>HotKey Window Animates</key>
-			<true/>
+			<false/>
 			<key>HotKey Window AutoHides</key>
 			<false/>
 			<key>HotKey Window Dock Click Action</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>HotKey Window Floats</key>
 			<true/>
 			<key>HotKey Window Reopens On Activation</key>
-			<false/>
+			<true/>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
