@@ -19,6 +19,7 @@ Dotfiles/.config/git/config.spotify
 Dotfiles/.config/karabiner/automatic_backups/*
 Dotfiles/.config/yarn/*
 Dotfiles/.config/iterm2/*
+Dotfiles/.config/.mono
 
 !Dotfiles/.config/gh/config.yml
 
