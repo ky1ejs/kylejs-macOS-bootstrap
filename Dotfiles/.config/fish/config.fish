@@ -45,3 +45,7 @@ alias docker-stop-all='docker stop $(docker ps -a -q)'
 
 # Created by `pipx` on 2022-08-31 13:10:32
 set PATH $PATH /Users/kylejs/.local/bin
+
+# SPT CONFIG BEGIN
+function spt; fish -c 'cd "$(git rev-parse --show-toplevel)" && ./tools/sptcli/src/sptcli.py $argv'; end
+# SPT CONFIG END
