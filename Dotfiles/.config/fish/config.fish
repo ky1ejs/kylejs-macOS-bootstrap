@@ -40,7 +40,7 @@ alias gmt='git mergetool'
 alias gfu='git fetch upstream -p'
 alias grup='git reset --hard upstream/master && git push -f origin master'
 alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
-alias npex='PATH=(npm bin):$PATH'
+alias npex='npm run-script env --'
 alias docker-stop-all='docker stop $(docker ps -a -q)'
 
 # Created by `pipx` on 2022-08-31 13:10:32
