@@ -20,6 +20,8 @@ Dotfiles/.config/karabiner/automatic_backups/*
 Dotfiles/.config/yarn/*
 Dotfiles/.config/iterm2/*
 Dotfiles/.config/.mono
+Dotfiles/.config/github-copilot/
+Dotfiles/.config/simple-update-notifier/
 
 !Dotfiles/.config/gh/config.yml
 
