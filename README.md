@@ -20,6 +20,15 @@ cd ~/Developer/kylejs-macOS-boostrap
 - Local git configs
 - App Store purchases
 
+### Apps that aren't installed here
+- BetterSnapTool
+- Copilot
+- Day One
+- Discord
+- Logi Bolt
+- Lunar
+- Parcel
+
 ### TODO
 
 - [ ] Add tests
