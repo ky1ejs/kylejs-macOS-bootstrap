@@ -11,7 +11,6 @@ brew 'fnm'
 brew 'pinentry'
 brew 'pinentry-mac'
 brew 'pyenv'
-brew 'rbenv'
 brew 'starship'
 brew 'stern'
 

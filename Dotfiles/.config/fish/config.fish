@@ -2,9 +2,6 @@ set PATH $HOME/.rbenv/shims $HOME/.jenv/bin $HOME/bin /usr/local/lib/node_module
 
 eval (/opt/homebrew/bin/brew shellenv)
 
-# rbenv
-rbenv init - | source
-
 # jenv
 status --is-interactive; and source (jenv init -|psub)
 
