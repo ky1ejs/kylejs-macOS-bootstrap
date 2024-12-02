@@ -22,6 +22,7 @@ Dotfiles/.config/iterm2/*
 Dotfiles/.config/.mono
 Dotfiles/.config/github-copilot/
 Dotfiles/.config/simple-update-notifier/
+Dotfiles/.config/raycast/
 
 !Dotfiles/.config/gh/config.yml
 
