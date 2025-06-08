@@ -1,0 +1,39 @@
+GOOSE_PROVIDER: ollama
+GOOSE_MODEL: qwen2.5
+OLLAMA_HOST: localhost:11434
+extensions:
+  computercontroller:
+    bundled: true
+    display_name: Computer Controller
+    enabled: false
+    name: computercontroller
+    timeout: 300
+    type: builtin
+  developer:
+    bundled: true
+    display_name: Developer
+    enabled: true
+    name: developer
+    timeout: 300
+    type: builtin
+  jetbrains:
+    bundled: true
+    display_name: Jetbrains
+    enabled: false
+    name: jetbrains
+    timeout: 300
+    type: builtin
+  memory:
+    bundled: true
+    display_name: Memory
+    enabled: false
+    name: memory
+    timeout: 300
+    type: builtin
+  tutorial:
+    bundled: true
+    display_name: Tutorial
+    enabled: false
+    name: tutorial
+    timeout: 300
+    type: builtin

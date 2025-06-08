@@ -1,4 +1,4 @@
-set PATH $HOME/.rbenv/shims $HOME/.jenv/bin $HOME/bin /usr/local/lib/node_modules $PATH /Applications/IntelliJ\ IDEA.app/Contents/MacOS
+set PATH $HOME/.rbenv/shims $HOME/.jenv/bin $HOME/bin /usr/local/lib/node_modules /Applications/IntelliJ IDEA.app/Contents/MacOS $PATH
 
 eval (/opt/homebrew/bin/brew shellenv)
 
