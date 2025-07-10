@@ -28,6 +28,9 @@ function install_brew() {
     exit 0
   fi
 
+  # update the PATH to include Homebrew
+  export PATH="/opt/homebrew/bin:$PATH"
+
   # Check for Xcode dependency
   if [ ! -d /Applications/Xcode.app ]; then
     handleError "Xcode needs to be installed to setup homebrew"
