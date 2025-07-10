@@ -36,7 +36,7 @@ function verify_install_rbenv() {
 function install_rbenv() {
     startNewSection
     
-    if ! verify_install_rbenv; then
+    if verify_install_rbenv; then
         printMessage "Ruby is already installed and verified" "$green"
         return 0
     fi
