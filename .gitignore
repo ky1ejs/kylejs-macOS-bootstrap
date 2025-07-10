@@ -30,3 +30,5 @@ Dotfiles/.config/raycast/
 
 .DS_Store
 iTerm/com.googlecode.iterm2.plist
+
+kubectl-site.yaml
