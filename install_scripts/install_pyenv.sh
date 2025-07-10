@@ -8,7 +8,7 @@ function latest_stable_python_version() {
 }
 
 
-function verify_install_python() {
+function verify_install_pyenv() {
   if ! exists "pyenv"; then
     return 2  # Not completed
   fi
@@ -23,7 +23,7 @@ function verify_install_python() {
   return 0  # Fully completed
 }
 
-function install_python() {
+function install_pyenv() {
   startNewSection
   if verify_install_python; then
     printMessage "Python is already installed and verified" "$green"
@@ -46,6 +46,11 @@ function install_python() {
   local python_version=$(latest_stable_python_version)
   if ! pyenv install "$python_version"; then
     handleError "Failed to install Python version $python_version"
+  fi
+
+  # make latest version the global default
+  if ! pyenv global "$python_version"; then
+    handleError "Failed to set Python version $python_version as global default"
   fi
   
   printMessage "Python version $python_version installed successfully" "$green"

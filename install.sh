@@ -26,7 +26,7 @@ echo ""
 source functions.sh
 source install_scripts/install_brew.sh
 source install_scripts/install_node.sh
-source install_scripts/install_python.sh
+source install_scripts/install_pyenv.sh
 source install_scripts/install_rbenv.sh
 source install_scripts/link_dotfiles.sh
 source install_scripts/configure_defaults.sh
@@ -54,12 +54,14 @@ handle_install() {
   local install_function="$2"
   local action_message="$3"
   local completion_message="$4"
-  local error_suffix="$5"
   
+  startNewSection
+  printMessage "Checking $verify_function" "$blue"
+
   if ! $verify_function; then
-    echo "$action_message"
+    printMessage "$action_message" "$yellow"
     if ! $install_function; then
-      echo "Failed to $action_message $error_suffix"
+      printMessage "Failed to $action_message" "$red"
       exit 1
     fi
   fi
@@ -110,29 +112,29 @@ else
   printMessage "Rosetta has been installed successfully." "$green"
 fi
 
-# Array of install configurations: "verify_func:install_func:action_msg:completion_msg:error_suffix"
+# Array of install configurations: "verify_func:install_func:action_msg:completion_msg"
 install_configs=(
-  "verify_link_dotfiles:link_dotfiles:Linking dotfiles...:Dotfiles linked...:Please check the Dotfiles directory and try again."
-  "verify_install_brew:install_brew:Homebrew is not installed. Installing Homebrew...:Homebrew and Brewfile have been installed...:Please check your internet connection and try again."
-  "verify_configure_defaults:configure_defaults:Configuring system defaults...:System defaults have been configured...:Please check the configuration script and try again."
-  "verify_link_xcode_theme:link_xcode_theme:Linking Xcode theme...:Xcode theme has been linked...:Please check the theme files and try again."
-  "verify_install_node:install_node:Node.js is not installed. Installing Node.js...:Node.js has been installed...:Please check your internet connection and try again."
-  "verify_install_jenv:install_jenv:Java is not installed. Installing Java...:Java has been installed...:Please check your internet connection and try again."
-  "verify_install_rbenv:install_rbenv:Ruby is not installed. Installing Ruby...:Ruby has been installed...:Please check your internet connection and try again."
-  "verify_install_python:install_python:Python is not installed. Installing Python...:Python has been installed...:Please check your internet connection and try again."
-  "verify_install_fish:install_fish:Fish shell is not installed. Installing Fish shell...:Fish shell has been installed...:Please check your internet connection and try again."
+  "verify_link_dotfiles:link_dotfiles:Linking dotfiles...:Dotfiles linked..."
+  "verify_install_brew:install_brew:Homebrew is not installed. Installing Homebrew...:Homebrew and Brewfile have been installed..."
+  "verify_configure_defaults:configure_defaults:Configuring system defaults...:System defaults have been configured..."
+  "verify_link_xcode_theme:link_xcode_theme:Linking Xcode theme...:Xcode theme has been linked..."
+  "verify_install_node:install_node:Node.js is not installed. Installing Node.js...:Node.js has been installed..."
+  "verify_install_jenv:install_jenv:Java is not installed. Installing Java...:Java has been installed..."
+  "verify_install_rbenv:install_rbenv:Ruby is not installed. Installing Ruby...:Ruby has been installed..."
+  "verify_install_pyenv:install_pyenv:Python is not installed. Installing Python...:Python has been installed..."
+  "verify_install_fish:install_fish:Fish shell is not installed. Installing Fish shell...:Fish shell has been installed..."
 )
 
 # Process all other installations using the generic handler
 for config in "${install_configs[@]}"; do
-  IFS=':' read -r verify_func install_func action_msg completion_msg error_suffix <<< "$config"
-  
+  IFS=':' read -r verify_func install_func action_msg completion_msg <<< "$config"
+
   # Skip dotfiles as it's already handled above
   if [ "$verify_func" = "verify_link_dotfiles" ]; then
     continue
   fi
-  
-  handle_install "$verify_func" "$install_func" "$action_msg" "$completion_msg" "$error_suffix"
+
+  handle_install "$verify_func" "$install_func" "$action_msg" "$completion_msg"
 done
 
 # Final message
