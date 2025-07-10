@@ -99,7 +99,7 @@ install_configs=(
 )
 
 # Check Homebrew installation
-if verify_install_brew; then
+if ! verify_install_brew; then
   if [ $? -eq 2 ]; then
     echo "Brewfile is partially installed or needs updating. Would you like to handle this now? (y/n)"
     read -n 1 -s key
