@@ -1,0 +1,4 @@
+# Copy to config.local and config.spotify to set
+[user]
+  email = your@email.com
+  signingkey = key-id-from-gpg

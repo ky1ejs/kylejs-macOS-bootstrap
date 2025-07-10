@@ -34,6 +34,20 @@ source install_scripts/link_xcode_theme.sh
 source install_scripts/install_jenv.sh
 source install_scripts/install_fish.sh
 
+echo "Is this a personal or work machine? (p/w)"
+while true; do
+  read -r machine_type
+  case "$machine_type" in
+    [Pp]* ) machine_type="personal"; break;;
+    [Ww]* ) machine_type="work"; break;;
+    * ) echo "Please answer p or w.";;
+  esac
+done
+
+echo "You selected: $machine_type machine"
+export MACHINE_TYPE="$machine_type"
+
+
 # Generic function to handle install verification and execution
 handle_install() {
   local verify_function="$1"
@@ -118,5 +132,21 @@ echo "You can now start using your macOS development environment."
 echo "Please restart your terminal or run 'exec fish' to start using Fish shell."
 echo "If you have any issues, please check the installation scripts and the README file for troubleshooting steps."
 echo ""
+
+startNewSection
+printMessage "All that remains is for you to configure the following applications:"
+printMessage "1Password, 1Password CLI, and 1Password SSH Agent" "$yellow"
+printMessage "Raycast – the config is in your 1Password vault" "$yellow"
+printMessage "GPG signing keys" "$yellow"
+printfmessage "Create a git config.local and config.spotify based on config.example" "$yellow"
+
+startNewSection
+printMessage "Here are some apps that aren't configured that you might want to configure"
+printMessage "- Copilot" "$yellow"
+printMessage "- Day One" "$yellow"
+printMessage "- Discord" "$yellow"
+printMessage "- Logictech MX Master App" "$yellow"
+printMessage "- Parcel" "$yellow"
+
 printMessage "Thank you for using kylejs macOS bootstrap!"  "$green"
 
