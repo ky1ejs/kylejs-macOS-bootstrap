@@ -43,6 +43,12 @@ function install_node() {
     handleError "Failed to install Node.js version $node_version"
   fi
 
+  # Install pnpm
+  if ! $(exists "pnpm"); then
+    printMessage "Installing pnpm package manager" "$green"
+    corepack enable pnpm
+  fi
+
   printMessage "Node.js version $node_version installed successfully" "$green"
 }
   
