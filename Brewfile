@@ -33,6 +33,7 @@ cask 'rapidapi'
 cask 'raycast'
 cask 'rocket'
 cask 'soundsource'
+cask 'spotify'
 cask 'visual-studio-code'
 
 # Fonts
