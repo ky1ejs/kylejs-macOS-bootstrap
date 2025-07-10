@@ -6,6 +6,9 @@ BREW_URL="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
 
 # Verification function for Homebrew installation
 function verify_install_brew() {
+    # update the PATH to include Homebrew
+    export PATH="/opt/homebrew/bin:$PATH"
+
     # Check if Homebrew is installed
     if ! exists "brew"; then
         return 1  # Not completed
@@ -28,8 +31,10 @@ function install_brew() {
     exit 0
   fi
 
-  # update the PATH to include Homebrew
-  export PATH="/opt/homebrew/bin:$PATH"
+  # update the PATH to include Homebrew if it doesn't include
+  if [[ ":$PATH:" != *":/opt/homebrew/bin:"* ]]; then
+    export PATH="/opt/homebrew/bin:$PATH"
+  fi
 
   # Check for Xcode dependency
   if [ ! -d /Applications/Xcode.app ]; then
