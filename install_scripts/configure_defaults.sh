@@ -53,9 +53,14 @@ function configure_defaults() {
     killall SystemUIServer
 
     # Copy plist files for Dock, Finder, and Terminal
-    cp -f plists/com.apple.dock.plist ~/Library/Preferences/com.apple.dock.plist
-    killall cfprefsd
-    killall Dock
+
+    # Copy relevant dock based on machine type
+    local dock_plist_path="$HOME/Library/Preferences/com.apple.dock.plist"
+    if [[ "$MACHINE_TYPE" == "work" ]]; then
+        cp -f plists/com.apple.dock.plist.work "$dock_plist_path"
+    else
+        cp -f plists/com.apple.dock.plist.personal "$dock_plist_path"
+    fi
 
     cp -f plists/com.apple.finder.plist ~/Library/Preferences/com.apple.finder.plist
     killall Finder
@@ -72,14 +77,6 @@ function configure_defaults() {
     printMessage "Setting up quick look for provisioning profiles" "$green"
     defaults write com.apple.finder QLEnableTextSelection -bool TRUE
     killall Finder
-
-    # Symlink dock plist based on machine type
-    local dock_plist_path="$HOME/Library/Preferences/com.apple.dock.plist"
-    if [ "$MACHINE_TYPE" = "personal" ]; then
-      ln -sf plists/com.apple.dock.plist.personal "$dock_plist_path"
-    else
-      ln -sf plists/com.apple.dock.plist.work "$dock_plist_path"
-    fi
 
     return 0  # Success
 }

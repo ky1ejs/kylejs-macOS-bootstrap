@@ -142,11 +142,11 @@ printfmessage "Create a git config.local and config.spotify based on config.exam
 
 startNewSection
 printMessage "Here are some apps that aren't configured that you might want to configure"
-printMessage "- Copilot" "$yellow"
-printMessage "- Day One" "$yellow"
-printMessage "- Discord" "$yellow"
-printMessage "- Logictech MX Master App" "$yellow"
-printMessage "- Parcel" "$yellow"
+printMessage "- Copilot" "$blue"
+printMessage "- Day One" "$blue"
+printMessage "- Discord" "$blue"
+printMessage "- Logictech MX Master App" "$blue"
+printMessage "- Parcel" "$blue"
 
 printMessage "Thank you for using kylejs macOS bootstrap!"  "$green"
 
