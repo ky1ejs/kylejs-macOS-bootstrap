@@ -84,7 +84,7 @@ wait_for_app() {
 wait_for_app "/Applications/1Password.app" "1Password" "https://1password.com/downloads/mac/"
 
 # Wait for Xcode installation
-wait_for_app "/Applications/Xcode.app" "Xcode" "https://developer.apple.com/download/"
+wait_for_app "/Applications/Xcode.app" "Xcode" "https://developer.apple.com/download/applications/"
 
 # Array of install configurations: "verify_func:install_func:action_msg:completion_msg:error_suffix"
 install_configs=(
