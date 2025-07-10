@@ -73,5 +73,13 @@ function configure_defaults() {
     defaults write com.apple.finder QLEnableTextSelection -bool TRUE
     killall Finder
 
+    # Symlink dock plist based on machine type
+    local dock_plist_path="$HOME/Library/Preferences/com.apple.dock.plist"
+    if [ "$MACHINE_TYPE" = "personal" ]; then
+      ln -sf plists/com.apple.dock.plist.personal "$dock_plist_path"
+    else
+      ln -sf plists/com.apple.dock.plist.work "$dock_plist_path"
+    fi
+
     return 0  # Success
 }
