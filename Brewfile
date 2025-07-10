@@ -2,9 +2,6 @@
 brew 'git'
 brew 'git-lfs'
 
-# Swift, Cocoa, Xcode etc.
-brew 'mergepbx'
-
 brew 'fish'
 brew 'gh'
 brew 'fnm'
