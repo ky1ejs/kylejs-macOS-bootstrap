@@ -11,6 +11,7 @@ brew 'stern'
 
 # Apps
 cask 'appcleaner'
+cask 'arc'
 cask 'autodesk-fusion'
 cask 'bambu-studio'
 cask 'bettertouchtool'
