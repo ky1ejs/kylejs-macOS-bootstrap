@@ -10,7 +10,6 @@ brew 'starship'
 brew 'stern'
 
 # Apps
-cask '1password'
 cask 'appcleaner'
 cask 'autodesk-fusion'
 cask 'bambu-studio'
