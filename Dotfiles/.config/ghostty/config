@@ -50,3 +50,4 @@ keybind = cmd+up=goto_split:up
 keybind = cmd+down=goto_split:down
 keybind = shift+enter=text:\n
 cursor-color = #01d82f
+background-opacity = 0.95
