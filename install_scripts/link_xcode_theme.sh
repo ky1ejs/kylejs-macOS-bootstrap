@@ -44,6 +44,15 @@ function link_xcode_theme() {
     # Create theme directory if it doesn't exist
     mkdir -p $THEME_LOCATION
 
+    # Remove existing theme file if it exists
+    if [ -L "$THEME_LOCATION/kylejs.xccolortheme" ];
+    then
+        rm "$THEME_LOCATION/kylejs.xccolortheme"
+    elif [ -f "$THEME_LOCATION/kylejs.xccolortheme" ]; then
+        printMessage "Removing existing theme file at $THEME_LOCATION/kylejs.xccolortheme" "$yellow"
+        rm "$THEME_LOCATION/kylejs.xccolortheme"
+    fi
+
     # Link the theme file
     ln -s $PWD/Applications/xcode/kylejs.xccolortheme $THEME_LOCATION/
 }
