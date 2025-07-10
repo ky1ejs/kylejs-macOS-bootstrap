@@ -89,6 +89,7 @@ wait_for_app "/Applications/Xcode.app" "Xcode" "https://developer.apple.com/down
 # Array of install configurations: "verify_func:install_func:action_msg:completion_msg:error_suffix"
 install_configs=(
   "verify_link_dotfiles:link_dotfiles:Linking dotfiles...:Dotfiles linked...:Please check the Dotfiles directory and try again."
+  "verify_install_brew:install_brew:Homebrew is not installed. Installing Homebrew...:Homebrew and Brewfile have been installed...:Please check your internet connection and try again."
   "verify_configure_defaults:configure_defaults:Configuring system defaults...:System defaults have been configured...:Please check the configuration script and try again."
   "verify_link_xcode_theme:link_xcode_theme:Linking Xcode theme...:Xcode theme has been linked...:Please check the theme files and try again."
   "verify_install_node:install_node:Node.js is not installed. Installing Node.js...:Node.js has been installed...:Please check your internet connection and try again."
@@ -97,30 +98,6 @@ install_configs=(
   "verify_install_python:install_python:Python is not installed. Installing Python...:Python has been installed...:Please check your internet connection and try again."
   "verify_install_fish:install_fish:Fish shell is not installed. Installing Fish shell...:Fish shell has been installed...:Please check your internet connection and try again."
 )
-
-# Check Homebrew installation
-if ! verify_install_brew; then
-  if [ $? -eq 2 ]; then
-    echo "Brewfile is partially installed or needs updating. Would you like to handle this now? (y/n)"
-    read -n 1 -s key
-    if [ "$key" = "y" ]; then
-      echo "Updating Brewfile..."
-      # Update the Brewfile
-      if brew bundle update; then
-        echo "Brewfile updated successfully."
-      else
-        echo "Failed to update Brewfile. Please check the Brewfile for issues."
-        exit 1
-      fi
-    fi
-  else
-    if ! install_brew; then
-      echo "Failed to install Homebrew. Please check your internet connection and try again."
-      exit 1
-    fi
-  fi
-fi
-echo "Homebrew and Brewfile have been installed..."
 
 # Process all other installations using the generic handler
 for config in "${install_configs[@]}"; do

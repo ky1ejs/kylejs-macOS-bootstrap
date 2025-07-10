@@ -15,7 +15,7 @@ function verify_install_brew() {
     if [ -f "Brewfile" ]; then
         # Use brew bundle check to see if packages are installed
         if ! brew bundle check --file=Brewfile >/dev/null 2>&1; then
-            return 2  # Partially completed - brew installed but packages missing
+            printMessage "Brewfile is partially installed or needs updating" "$yellow"
         fi
     fi
     
