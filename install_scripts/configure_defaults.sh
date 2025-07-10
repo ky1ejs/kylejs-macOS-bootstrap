@@ -61,6 +61,7 @@ function configure_defaults() {
     else
         cp -f plists/com.apple.dock.plist.personal "$dock_plist_path"
     fi
+    killall Dock
 
     cp -f plists/com.apple.finder.plist ~/Library/Preferences/com.apple.finder.plist
     killall Finder
