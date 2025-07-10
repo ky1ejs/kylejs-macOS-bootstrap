@@ -100,6 +100,16 @@ wait_for_app "/Applications/1Password.app" "1Password" "https://1password.com/do
 # Wait for Xcode installation
 wait_for_app "/Applications/Xcode.app" "Xcode" "https://developer.apple.com/download/applications/"
 
+# Check if Rosetta is installed
+startNewSection
+printMessage "Checking if Rosetta is installed..." "$yellow"
+if ! /usr/sbin/softwareupdate --install-rosetta --agree-to-license; then
+  echo "Failed to install Rosetta. Please check your internet connection and try again."
+  exit 1
+else
+  printMessage "Rosetta has been installed successfully." "$green"
+fi
+
 # Array of install configurations: "verify_func:install_func:action_msg:completion_msg:error_suffix"
 install_configs=(
   "verify_link_dotfiles:link_dotfiles:Linking dotfiles...:Dotfiles linked...:Please check the Dotfiles directory and try again."
