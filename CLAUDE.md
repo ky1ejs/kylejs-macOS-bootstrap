@@ -14,6 +14,7 @@ The `install.sh` script orchestrates the installation process by calling various
 # Structure
 The repo is structured as follows:
 - `install.sh`: The main script that runs all the other scripts in the correct order.
+- `link.sh`: Links `Dotfiles/` and `bin/` only, for a Mac set up another way (the homelab Mac Studio). Dotfiles run on every such Mac, so guard any tool not every Mac installs (`type -q` in fish).
 - `Applications/`: Contains various files (e.g. `.plist` files) for configuring applications.
 - `Dotfiles/`: Contains various dotfiles for configuring the shell and other tools. These files are symlinked to the home directory.
 - `plists/`: Contains various `.plist` files for configuring system settings.
