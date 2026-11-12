@@ -49,5 +49,5 @@ keybind = cmd+right=goto_split:right
 keybind = cmd+up=goto_split:up
 keybind = cmd+down=goto_split:down
 keybind = shift+enter=text:\n
+keybind = cmd+shift+ctrl+alt+==equalize_splits
 cursor-color = #01d82f
-background-opacity = 0.95

@@ -44,6 +44,8 @@ alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 alias npex='npm run-script env --'
 alias docker-stop-all='docker stop $(docker ps -a -q)'
 alias pn=pnpm
+alias dcd='docker compose down'
+alias dcu='docker compose up -d'
 
 # Created by `pipx` on 2022-08-31 13:10:32
 set PATH $PATH /Users/kylejs/.local/bin
@@ -52,3 +54,7 @@ set PATH $PATH /Users/kylejs/.local/bin
 function spt; fish -c 'cd "$(git rev-parse --show-toplevel)" && ./tools/sptcli/src/sptcli.py $argv'; end
 # SPT CONFIG END
 fish_add_path --move --path /opt/spotify-devex/bin
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
