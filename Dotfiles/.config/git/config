@@ -6,12 +6,10 @@
 [user]
 	name = Kyle Satti
 	useConfigOnly = true
-[include]
-  path = config.local
 
 [core]
 	excludesfile = ~/.config/git/ignore_global
-	attributesfile = ~/.config/git/gitattributes
+	attributesfile = ~/.config/git/attributes
 [merge "mergepbx"]
         name = Xcode project file merger
         driver = /usr/local/bin/mergepbx %O %A %B
@@ -41,6 +39,16 @@
 	cm = commit -m
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+
+# Per-machine settings: user.email at least. Included after everything above
+# so a machine can override it, e.g. `[commit] gpgsign = false` on one with
+# no signing key. config.spotify comes after, so work repos keep their email.
+[include]
+  path = config.local
 
 # Adding this here so that directories outside of the ~/Developer 
 # dir will not be overridden. This was a work around for SPM.
@@ -49,8 +57,3 @@
 
 [includeIf "gitdir:~/Developer/spotify/**"]
   path = config.spotify
-
-[commit]
-	gpgsign = true
-[init]
-	defaultBranch = main
