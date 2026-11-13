@@ -12,7 +12,12 @@ if type -q jenv
     status --is-interactive; and source (jenv init -|psub)
 end
 
+# Set here rather than as universal variables: fish_variables is per machine
+# and untracked. fish_add_path skips a folder that doesn't exist.
+fish_add_path -g ~/bin /Applications/Ghostty.app/Contents/MacOS
+
 # pyenv
+set -gx PYENV_ROOT ~/.pyenv
 if type -q pyenv
     status is-login; and pyenv init --path | source
     status is-interactive; and pyenv init - | source

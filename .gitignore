@@ -4,6 +4,8 @@ Dotfiles/.config/fish/fish_history
 Dotfiles/.config/fish/functions
 Dotfiles/.config/fish/functions
 Dotfiles/.config/fish/fishd.*
+# Per machine: fish rewrites it, and its version differs between Macs.
+Dotfiles/.config/fish/fish_variables
 Dotfiles/.atom/.apm/*
 Dotfiles/.atom/packages/*
 Dotfiles/.atom/blob-store/*
