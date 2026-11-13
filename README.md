@@ -21,6 +21,14 @@ On a Mac that is set up some other way (the homelab Mac Studio is configured by 
 
 The links point into the checkout, so the same files serve every Mac. Edit them on either machine, commit, and `git pull` on the other. Each machine's `~/.config/git/config.local` holds what differs, such as `user.email`, or `[commit] gpgsign = false` where there is no signing key.
 
+#### SSH to the homelab
+
+`Dotfiles/.config/ssh/config` defines `ssh nas` and `ssh ms` (the Mac Studio). Each one uses the tailnet name while Tailscale is connected and the LAN address while it is not. `~/.ssh/config` stays per machine, and is not linked, because `~/.ssh` also holds `known_hosts`. To use the shared hosts, put this line at the top of it, above any `Host *`:
+
+```
+Include ~/.config/ssh/config
+```
+
 ### Things to do before running the install script
 
 - Install Xcode ([here](https://developer.apple.com/download/applications/))

@@ -1,0 +1,44 @@
+# Homelab hosts, for every Mac that links these dotfiles. ~/.ssh/config stays
+# per machine and reads this file with one line at its top:
+#   Include ~/.config/ssh/config
+# It has to come before any `Host *` there, because ssh keeps the first value
+# it obtains for a keyword. A Mac without that line ignores this file, which is
+# what the Mac Studio does: these are the laptop's ways in.
+#
+# `ssh nas` and `ssh ms` work whether or not Tailscale is connected.
+#   Tailscale up   -> tailnet name, correct both at home and away
+#   Tailscale down -> LAN address, for being home with it disconnected
+# `tailscale status` is a local API call (~30ms, exit 1 when stopped), so
+# neither path pays a network probe. Each Match block MUST stay above its
+# `Host` block. Where /usr/local/bin/tailscale does not exist, the exec fails
+# and the LAN address wins.
+
+Match host nas exec "/usr/local/bin/tailscale status --peers=false"
+  HostName kyles-nas.tail3df177.ts.net
+
+Host nas
+  HostName 192.168.3.2
+  # Both paths are the same machine and present the same ed25519 key, so pin
+  # them to one known_hosts entry rather than maintaining two.
+  HostKeyAlias kyles-nas.tail3df177.ts.net
+  User admin
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+  IdentitiesOnly yes
+  IdentityFile ~/.config/ssh/nas.pub
+
+# The Mac Studio. Over the tailnet this is Tailscale SSH, which checks the
+# Tailscale sign-in rather than the key, and asks for it again in a browser
+# every 12 hours. On the LAN only the key gets in. homelab's
+# docs/mac-studio.md has the policy behind both.
+Match host ms exec "/usr/local/bin/tailscale status --peers=false"
+  HostName mac-studio.tail3df177.ts.net
+
+Host ms
+  HostName 192.168.40.2
+  # Tailscale SSH on the Studio presents sshd's ed25519 key, so both paths
+  # share one known_hosts entry here too.
+  HostKeyAlias mac-studio.tail3df177.ts.net
+  User kylejs
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+  IdentitiesOnly yes
+  IdentityFile ~/.config/ssh/mac-studio.pub
