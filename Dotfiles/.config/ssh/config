@@ -30,7 +30,20 @@ Host nas
 # Tailscale sign-in rather than the key, and asks for it again in a browser
 # every 12 hours. On the LAN only the key gets in. homelab's
 # docs/mac-studio.md has the policy behind both.
-Match host ms exec "/usr/local/bin/tailscale status --peers=false"
+#
+# Unlike nas, `ms` takes the tailnet name only while the Studio itself is
+# online there, not merely the laptop. After a restart FileVault keeps the
+# Studio off the tailnet until it is unlocked, and only a pre-boot SSH server
+# answers, on the LAN address, taking the account password. So one command
+# covers every case:
+#   Studio on the tailnet -> tailnet name, Tailscale SSH
+#   Studio off it, laptop's Tailscale up -> LAN address through the NAS's
+#     subnet route (home or away): the unlock, or the key if sshd is up
+#   laptop's Tailscale down -> LAN address, from home
+# `tailscale status` lists peers from local state, with no network probe, and
+# marks a peer that has dropped off `offline`. The pipe exits 0 only for a
+# mac-studio line without that mark. The Match block MUST stay above `Host ms`.
+Match host ms exec "/usr/local/bin/tailscale status 2>/dev/null | grep -E '^[0-9.]+ +mac-studio ' | grep -qv offline"
   HostName mac-studio.tail3df177.ts.net
 
 Host ms
@@ -43,15 +56,3 @@ Host ms
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
   IdentitiesOnly yes
   IdentityFile ~/.config/ssh/mac-studio.pub
-
-# The Mac Studio's FileVault unlock, for after any restart that was not
-# `fdesetup authrestart`. Until the disk is unlocked only a pre-boot SSH server
-# answers, on the LAN address, and it takes the account password. `ms` cannot
-# reach it: with Tailscale connected it picks the tailnet name, which is down
-# until the unlock. Away from home this address reaches the Studio through the
-# NAS's Tailscale subnet route. homelab's docs/mac-studio.md has the flow.
-Host ms-unlock
-  HostName 192.168.40.2
-  User kylejs
-  # Only the account password unlocks, so offer no key.
-  PubkeyAuthentication no
