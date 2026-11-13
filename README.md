@@ -23,7 +23,7 @@ The links point into the checkout, so the same files serve every Mac. Edit them 
 
 #### SSH to the homelab
 
-`Dotfiles/.config/ssh/config` defines `ssh nas` and `ssh ms` (the Mac Studio). Each one uses the tailnet name while Tailscale is connected and the LAN address while it is not. `~/.ssh/config` stays per machine, and is not linked, because `~/.ssh` also holds `known_hosts`. To use the shared hosts, put this line at the top of it, above any `Host *`:
+`Dotfiles/.config/ssh/config` defines `ssh nas` and `ssh ms` (the Mac Studio). Each one uses the tailnet name while Tailscale is connected and the LAN address while it is not. `ssh ms-unlock` unlocks the Mac Studio's FileVault after a restart, at home or away. `~/.ssh/config` stays per machine, and is not linked, because `~/.ssh` also holds `known_hosts`. To use the shared hosts, put this line at the top of it, above any `Host *`:
 
 ```
 Include ~/.config/ssh/config
