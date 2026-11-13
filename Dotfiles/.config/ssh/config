@@ -52,9 +52,9 @@ Host ms
 # NAS's Tailscale subnet route. homelab's docs/mac-studio.md has the flow.
 Host ms-unlock
   HostName 192.168.40.2
-  # agent unlocks, because the unlock logs in the user who does it, and
-  # agent's session runs the Studio's Claude Remote Control servers.
+  # worker unlocks, because the unlock logs in the user who does it, and
+  # worker's session runs the Studio's Claude Remote Control servers.
   # kylejs@192.168.40.2 unlocks too, with no servers.
-  User agent
+  User worker
   # Only the account password unlocks, so offer no key.
   PubkeyAuthentication no
