@@ -35,9 +35,10 @@ Match host ms exec "/usr/local/bin/tailscale status --peers=false"
 
 Host ms
   HostName 192.168.40.2
-  # Tailscale SSH on the Studio presents sshd's ed25519 key, so both paths
-  # share one known_hosts entry here too.
-  HostKeyAlias mac-studio.tail3df177.ts.net
+  # No HostKeyAlias here, unlike nas, though both paths present the same key.
+  # ssh labels a password prompt with the alias, and the FileVault unlock asks
+  # for one over the LAN, so the alias would name the tailnet on the LAN path.
+  # Each path has its own known_hosts entry instead.
   User kylejs
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
   IdentitiesOnly yes
